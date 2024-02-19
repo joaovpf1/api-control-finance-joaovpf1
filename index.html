@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Control Finance</title>
+  <link rel="shortcut icon" href="./src/assets/favicon.ico" type="image/x-icon" />
+  <meta name="description" content="Control Finance - Seu controle financeiro" />
+  <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+  <link rel="stylesheet" href="./src/styles/index.css" />
+  <link rel="stylesheet" href="./src/styles/header.css">
+  <link rel="stylesheet" href="./src/styles/button.css">
+</head>
+
+
+<body>
+  <header class="header">
+    <div class="header-div">
+      <h1 class="header-title">Control<span> Finance</span></h1>
+      <button class="modal-bttn">Registrar novo valor</button>
+    </div>
+  </header>
+
+  <main id="app">
+    <section>
+      <nav>
+        <h2 class="nav-title">Resumo financeiro</h2>
+        <ul class="nav-list">
+          <li class="nav-options">
+            <input class="input-option" hidden type="radio" category="option" id="Todos" name="option" value="0">
+            <label class="option-bttn" for="Todos">Todos</label>
+          </li>
+          <li class="nav-options">
+            <input class="input-option" hidden type="radio" category="option" id="Entradas" name="option" value="1">
+            <label class="option-bttn" for="Entradas">Entradas</label>
+          </li>
+          <li class="nav-options">
+            <input class="input-option" hidden type="radio" category="option" id="Saída" name="option" value="2">
+            <label class="option-bttn" for="Saída">Saída</label>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sum-div">
+        <h2 class="sum-title">Soma dos valores</h2>
+        <div class="div__sum-value">
+          <p class="sum-value"></p>
+        </div>
+      </div>
+
+      <ul id="mainList" class="value-ul__active">
+        <!-- <li class="value-li">
+            <p class="value-num">R$40,00</p>
+            <div class="div-close">
+              <p class="value-type">Entrada</p>
+              <button class="delete-bttn">
+                <img class="delete-value" src="./src/assets/trash.svg" alt="lixeira">
+              </button>
+            </div>
+          </li> -->
+      </ul>
+
+      <div class="null-container">
+        <h2 class="null-title">Nenhum valor cadastrado</h2>
+        <p class="null-description">Registrar novo valor</p>
+      </div>
+    </section>
+
+    <dialog>
+      <div class="dialog-container">
+
+        <div class="div-modal">
+          <h2 class="modal-title">Registro de valor</h2>
+          <button class="close-bttn">X</button>
+        </div>
+
+        <p class="modal-description">Digite o valor e em seguida aperte no botão referente ao tipo de valor</p>
+        <div class="title-div">
+          <h3 class="value-title">Valor</h3>
+
+        </div>
+        <div class="modal__div-value">
+          <p class="modal-caracter">R$</p>
+          <input class="modal-input" type="number" placeholder="00,00">
+        </div>
+        <div class="type-value__container">
+          <h3 class="value-title">Tipo de valor</h3>
+          <div class="div-type">
+            <input class="input-dialog" hidden type="radio" id="entrada" name="categoryID" value="0">
+            <label class="type-input" for="entrada">Entrada</label>
+            <input class="input-dialog" hidden type="radio" id="saida" name="categoryID" value="1">
+            <label class="type-input" for="saida">Saída</label>
+          </div>
+        </div>
+
+        <div class="modal-send-bttn">
+          <button class="bttn-cancel">Cancelar</button>
+          <button class="bttn-send">Inserir valor</button>
+        </div>
+      </div>
+    </dialog>
+  </main>
+  <script src="./src/scripts/modal.js"></script>
+  <script type="module" src="./src/scripts/index.js"></script>
+</body>
+
+</html>
