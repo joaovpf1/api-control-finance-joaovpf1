@@ -1,0 +1,349 @@
+/* Desenvolva a estilização da sua página aqui */
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 16px;
+    width: 100vw;
+}
+
+nav {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 38px;
+}
+
+.nav-title {
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-2);
+    color: var(--color-grey-1);
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.nav-options {
+    display: flex;
+}
+
+.sum-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 44px;
+    background-color: var(--color-grey-4);
+    border-radius: var(--radius-1);
+}
+
+.sum-title {
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-2);
+    padding-left: 16px;
+    color: var(--color-grey-1);
+}
+
+.div__sum-value {
+    display: flex;
+    flex-direction: row;
+    padding-right: 16px;
+}
+
+.sum-value {
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-2);
+    color: var(--color-grey-1);
+}
+
+#mainList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.value-li {
+    width: 90%;
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.value-li:hover {
+    border: 1.5px solid var(--color-brand-1);
+    border-radius: var(--radius-1);
+}
+
+.value-num {
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-2);
+    color: var(--color-grey-1);
+}
+
+.div-close {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-right: 10px;
+}
+
+.value-type {
+    width: 68px;
+    height: 26px;
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-2);
+    color: var(--color-grey-2);
+    background-color: var(--color-grey-4);
+    border-radius: var(--radius-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.null-container {
+    width: 90%;
+    height: 84px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-grey-5);
+    border: 1.5px dashed var(--color-grey-3);
+    border-radius: var(--radius-1);
+    gap: 16px;
+    display: none;
+    cursor: pointer;
+}
+
+.null-title {
+    font-size: var(--font-size-2);
+    color: var(--color-grey-1);
+    font-weight: var(--font-weight-1);
+}
+
+.null-description {
+    font-size: var(--font-size-3);
+    color: var(--color-grey-2);
+    font-weight: var(--font-weight-2);
+}
+
+@keyframes animation-dialog{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+dialog {
+    width: 343px;
+    top: 56px;
+    border: none;
+    border-radius: var(--radius-1);
+    animation-name: animation-dialog;
+    animation-duration: 1s;
+}
+
+dialog::backdrop {
+    background-color: rgba(33, 37, 41, 0.5);
+}
+
+.dialog-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 20px;
+}
+
+.div-modal {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    color: var(--color-grey-1);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+    line-height: var(--font-line-height-1);
+}
+
+.modal-description {
+    width: 100%;
+    color: var(--color-grey-2);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-3);
+    line-height: var(--font-line-height-1);
+
+}
+
+.value-title {
+    color: var(--color-grey-1);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-2);
+    line-height: var(--font-line-height-1);
+}
+
+.modal__div-value {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1.5px solid var(--color-grey-3);
+    border-radius: var(--radius-1);
+    gap: 3px;
+}
+
+.modal__div-value:hover {
+    border: 1.5px solid blue;
+}
+
+.modal-caracter {
+    color: var(--color-grey-2);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-3);
+    line-height: var(--font-line-height-1);
+    padding-left: 5px;
+}
+
+.modal-input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: var(--color-grey-2);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-3);
+    line-height: var(--font-line-height-1);
+    padding-top: 2px;
+    outline: none;
+}
+
+.div-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.type-input {
+    width: 100%;
+    height: 32px;
+    background-color: var(--fixed-white);
+    border: none;
+    border-radius: var(--radius-1);
+    color: var(--color-grey-2);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-1);
+    line-height: var(--font-line-height-1);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type='radio']:checked+label {
+    color: var(--color-brand-1);
+    border: 1.5px solid var(--color-brand-1);
+    background-color: var(--color-brand-3);
+}
+
+.modal-send-bttn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+#app {
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    dialog {
+        width: 428px;
+        height: 350px;
+    }
+
+    .type-value__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .value-title {
+        width: 33%;
+    }
+
+    .div-type {
+        width: 66%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .modal-send-bttn {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+    }
+
+    .bttn-cancel {
+        width: 89px;
+        height: 31px;
+    }
+
+    .bttn-send {
+        width: 90px;
+        height: 31px;
+    }
+
+    #mainList {
+        width: 100%;
+    }
+
+    .sum-div {
+        width: 100%;
+    }
+
+    .value-li {
+        width: 100%;
+    }
+
+    .null-container {
+        width: 100%;
+    }
+}
